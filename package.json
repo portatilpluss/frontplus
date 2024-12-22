@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "nodemon app/index.js --exec babel-node",
-    "build": "babel app --out-dir dist && copyfiles -u 1 app/views/**/* dist/views"
+    "build": "babel app --out-dir dist && copyfiles -u 1 app/views/**/* dist/views",
+    "start":"app dist/index.js"
   },
   "keywords": [],
   "author": "",
