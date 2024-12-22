@@ -1,19 +1,12 @@
-"use strict";
-
-var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.oauthEmail = exports.oauth = void 0;
-var _regenerator = _interopRequireDefault(require("@babel/runtime/regenerator"));
-var _asyncToGenerator2 = _interopRequireDefault(require("@babel/runtime/helpers/asyncToGenerator"));
-var _dotenv = require("dotenv");
-var _jsonwebtoken = _interopRequireDefault(require("jsonwebtoken"));
-(0, _dotenv.config)();
-var oauth = exports.oauth = /*#__PURE__*/function () {
-  var _ref = (0, _asyncToGenerator2["default"])(/*#__PURE__*/_regenerator["default"].mark(function _callee(req, res, next) {
+import _asyncToGenerator from "@babel/runtime/helpers/asyncToGenerator";
+import _regeneratorRuntime from "@babel/runtime/regenerator";
+import { config } from 'dotenv';
+import jwt from 'jsonwebtoken';
+config();
+export var oauth = /*#__PURE__*/function () {
+  var _ref = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime.mark(function _callee(req, res, next) {
     var token, decoded;
-    return _regenerator["default"].wrap(function _callee$(_context) {
+    return _regeneratorRuntime.wrap(function _callee$(_context) {
       while (1) switch (_context.prev = _context.next) {
         case 0:
           _context.prev = 0;
@@ -25,7 +18,7 @@ var oauth = exports.oauth = /*#__PURE__*/function () {
           return _context.abrupt("return", res.redirect('/'));
         case 4:
           _context.next = 6;
-          return _jsonwebtoken["default"].verify(token, process.env.PRIVATE_KEY);
+          return jwt.verify(token, process.env.PRIVATE_KEY);
         case 6:
           decoded = _context.sent;
           req.user = decoded;
@@ -47,10 +40,10 @@ var oauth = exports.oauth = /*#__PURE__*/function () {
     return _ref.apply(this, arguments);
   };
 }();
-var oauthEmail = exports.oauthEmail = /*#__PURE__*/function () {
-  var _ref2 = (0, _asyncToGenerator2["default"])(/*#__PURE__*/_regenerator["default"].mark(function _callee2(req, res, next) {
+export var oauthEmail = /*#__PURE__*/function () {
+  var _ref2 = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime.mark(function _callee2(req, res, next) {
     var token, decoded;
-    return _regenerator["default"].wrap(function _callee2$(_context2) {
+    return _regeneratorRuntime.wrap(function _callee2$(_context2) {
       while (1) switch (_context2.prev = _context2.next) {
         case 0:
           _context2.prev = 0;
@@ -62,7 +55,7 @@ var oauthEmail = exports.oauthEmail = /*#__PURE__*/function () {
           return _context2.abrupt("return", res.redirect('/'));
         case 4:
           _context2.next = 6;
-          return _jsonwebtoken["default"].verify(token, process.env.PRIVATE_KEY);
+          return jwt.verify(token, process.env.PRIVATE_KEY);
         case 6:
           decoded = _context2.sent;
           req.user = decoded;

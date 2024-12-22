@@ -1,12 +1,6 @@
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.controller = void 0;
-var _dotenv = require("dotenv");
-var _express = require("express");
-(0, _dotenv.config)();
+import { config } from "dotenv";
+import { urlencoded } from "express";
+config();
 var Home = function Home(req, res) {
   var url = process.env.APIURL;
   var urlFull = "".concat(url, "/login");
@@ -46,7 +40,7 @@ var logout = function logout(req, res) {
   res.clearCookie('token');
   res.redirect('/');
 };
-var controller = exports.controller = {
+export var controller = {
   Home: Home,
   Register: Register,
   forgotPassword: forgotPassword,
