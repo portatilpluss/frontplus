@@ -1,4 +1,5 @@
 import app from "./app.js";
-app.listen(app.get('port'), function () {
-  console.log("http://localhost:".concat(app.get('port')));
-});
+
+app.listen(app.get('port'), ()=>{
+    console.log(`http://localhost:${app.get('port')}`);
+})
