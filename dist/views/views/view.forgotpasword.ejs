@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email</title>
+    <link rel="icon" href="../img/sena.png">
+    <link rel="stylesheet" href="../css/forgot.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav__item">
+                <h1>Portatil Plus</h1>
+            </div>
+            
+        </nav>
+    </header>
+    <main>
+        <div class="main__content">
+            <h2>Ingresar Correo Electrónico</h2>
+            <div class="main__form">
+                <div class="form__group">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form__group form__btn">
+                    <!-- <input type="submit" value="Recuperar"> -->
+                    <button class="btn" onclick="forgotEmail();">Enviar</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div id="apiFull" data-url="<%= urlFull %>"></div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="../js/forgotEmail.js"></script>
+</body>
+</html>
