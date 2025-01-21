@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PortatilPlus</title>
+    <link rel="stylesheet" href="../../css/partialuser.css">
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"/>
+</head>
+<body>
+    <header id="header">
+        <ul class="nav__section">
+            <li class="nav__logo">
+                <div class="ca">
+                    <span id="name"></span>
+                    <span id="email"></span>
+                </div>
+                <!-- <i class='bx bx-chevron-left'></i> -->
+                <i class='bx bxs-minus-circle' id="of"></i>
+            </li>
+            <li class="nav__item a" id="reload">
+                <i class='bx bx-home'></i>
+                <a href="/dash/admin" class="item__text">
+                     Home</a>
+            </li>
+            <li class="nav__item b">
+                <i class='bx bx-laptop'></i>
+                <a href="/dash/computers" class="item__text">Computer</a>
+            </li>
+            <li class="nav__item e">
+                <i class='bx bx-mouse-alt'></i>
+                <a href="/dash/accesories" class="item__text">Accesories</a>
+            </li>
+            <li class="nav__item c">
+                <i class='bx bx-calendar-alt'></i>
+                <a href="#" class="item__text">Booking</a>
+            </li>
+            <li class="nav__item d">
+                <i class='bx bx-user-pin'></i>
+                <a href="/dash/employes" class="item__text">Admin</a>
+            </li>
+            <li class="nav__item d">
+                <i class='bx bx-user'></i>
+                <a href="#" class="item__text">User</a>
+            </li>
+            <li class="nav__item c">
+                <i class='bx bx-book'></i>
+                <a href="#" class="item__text">Notes</a>
+            </li>
+            <li class="nav__item c">
+                <i class='bx bx-comment'></i>
+                <a href="#" class="item__text">Chat</a>
+            </li>
+            <li class="nav__item --logout">
+                <i class='bx bx-log-out'></i>
+                <form action="/logout" method="POST">
+                    <!-- <button type="submit" class="item__text --btn">Logout</button> -->
+                    <input type="submit" class="item__text --btn" id="logout" value="Logout">
+                    <input type="hidden" id="url" data-url="<%= FullUrl %>">
+                </form>
+            </li>
+            
+        </ul>
+    </header>
+    <main>
+        <nav>
+            <ul>
+                <div class="text">
+                    <i class='bx bx-menu' id="menu"></i>
+                    <h1>Dashboard</h1>
+                    
+                </div>
+            </ul>    
+            <ul class="header__section">
+                <div class="online">
+                    <i class='bx bxs-circle' id="onn"></i>
+                    <p class="online__text">Online</p>  
+                </div>
+                 <div class="notification-icon">
+                    <i class='bx bx-bell' id="bell"></i>
+                     <div class="bell__notification">
+                        <div class="bell__header">
+                            <h2>Notificaciónes</h2>
+                            <i class='bx bx-cog'></i>
+                        </div>
+                        <div class="bell__body">
+                            <ul class="bell__list">
+                                <li class="bell__item">
+                                    <span class="bell__dot"></span>
+                                    <div>
+                                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                                        <p class="bell__time">25/12/2024</p>
+                                    </div>
+                                </li>
+                                <li class="bell__item">
+                                    <span class="bell__dot"></span>
+                                    <div>
+                                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                                        <p class="bell__time">25/12/2024</p>
+                                    </div>
+                                </li>
+                                <li class="bell__item">
+                                    <span class="bell__dot"></span>
+                                    <div>
+                                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                                        <p class="bell__time">25/12/2024</p>
+                                    </div>
+                                </li>
+                                <li class="bell__item">
+                                    <span class="bell__dot"></span>
+                                    <div>
+                                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                                        <p class="bell__time">25/12/2024</p>
+                                    </div>
+                                </li>
+                                <li class="bell__item">
+                                    <span class="bell__dot"></span>
+                                    <div>
+                                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                                        <p class="bell__time">25/12/2024</p>
+                                    </div>
+                                </li>
+                                <li class="bell__item">
+                                    <span class="bell__dot"></span>
+                                    <div>
+                                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                                        <p class="bell__time">25/12/2024</p>
+                                    </div>
+                                </li>
+                                <li class="bell__item">
+                                    <span class="bell__dot"></span>
+                                    <div>
+                                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                                        <p class="bell__time">25/12/2024</p>
+                                    </div>
+                                </li>
+                                <li class="bell__item">
+                                    <span class="bell__dot"></span>
+                                    <div>
+                                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                                        <p class="bell__time">25/12/2024</p>
+                                    </div>
+                                </li>
+                                <li class="bell__item">
+                                    <span class="bell__dot"></span>
+                                    <div>
+                                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                                        <p class="bell__time">25/12/2024</p>
+                                    </div>
+                                </li>
+                               
+                            </ul>
+                        </div>
+                        <div class="bell__header --footer">
+                            <a href="#">Ver todas las notificaciones</a>
+                        </div>
+                    </div> 
+                </div> 
+                 <!-- <div class="profile">
+                    <span id="names"></span>
+                </div> -->
+            </ul>
+        </nav>
+        <div class="main">
+
+        
+
+        
+   
+    <script src="../../js/template.js"></script>

@@ -1,0 +1,132 @@
+
+<%- include('../templates/admin.ejs') %>
+<head>
+    <link rel="stylesheet" href="../../css/employes.css">
+
+</head>
+
+   <div class="search">
+    <article>
+        <h1 class="title">Panel de Admin</h1>
+        <p class="description">Getiona los Permisos y Roles de los Admin</p>
+    </article>
+    <article class="btns">
+        <input type="search" class="search__admin" placeholder="Buscar Administrador">
+        <input type="hidden" id="fullurll" data-url="<%= urlFull %>">
+        <a href="/dash/add-employes" class="btn">+Admin</a>
+        <!-- <button class="--btnn">Permisos</button> -->
+    </article>
+   </div>
+   <!-- CARD PERMISSION -->
+   <div class="target__card">
+    <article class="card">
+        <div class="icon">
+            <i class='bx bx-user' id="user"></i>
+            <button class="btn-add">Ver Detalles</button>
+        </div>
+        <div class="card__cont">
+            <h2>Total Admins</h2>
+            <span class="test">12</span>
+        </div>
+    </article>
+    <article class="card">
+        <div class="icon">
+            <i class='bx bx-shield' id="shield"></i>
+            <button class="btn-view">Ver Detalles</button>
+        </div>
+        <div class="card__cont">
+            <h2>Roles</h2>
+            <span class="test">4</span>
+            <span>Engeneer, Employes</span>
+        </div>
+    </article>
+    <article class="card">
+        <div class="icon">
+            <i class='bx bx-time' id="time"></i>
+            <button class="btn-time">Ver Detalles</button>
+        </div>
+        <div class="card__cont">
+            <h2>Ultima Actividad</h2>
+            <span class="test">5 min {lisandro}</span>
+        </div>
+    </article>
+   </div>
+
+   <div class="plus__admin" id="body">
+    <div class="plus__card">
+        <div class="card__header">
+            <div class="header">
+                <div class="rounder">Li</div>
+                <div class="name">
+                    <h3>${data[i].name}</h3>
+                    <span class="email"><i class='bx bx-envelope' id="em"></i>   ${data[i].email}</span>
+                </div>
+            </div>
+            <i class='bx bx-dots-vertical-rounded open' id="open"></i>
+        </div>
+        <!-- body -->
+         <div class="card__body">
+            <p> <i class='bx bx-user' id="em"></i>
+                ${data[i].lastname} </p>
+            <p>
+                <i class='bx bx-phone' id="em"></i>
+                ${data[i].phone}</p>
+            <p>
+                <i class='bx bx-calendar' id="em"></i>
+
+                ${data[i].age}</p>
+            <p>
+                <i class='bx bx-user-pin' id="em"></i>
+
+                Id</p>
+            <p>${data[i].idemployes}</p>
+         </div>
+         <!-- WINDOW MODAL -->
+          <div class="window view" id="view">
+            <div class="window__body">
+                <ul class="window_item">
+                    <li class="item__window">
+                        <i class='bx bx-show' id="ven"></i>                        
+                        <a href="#">Ver Perfil</a>
+                    </li>
+                    <li class="item__window">
+                        <i class='bx bxs-pencil' id="ven"></i>
+                        <a href="">Modificar Permisos</a>
+                    </li>
+                    <li class="item__window">
+                        <i class='bx bx-lock' id="ven"></i>
+                        <a href="#">Suspender Cuenta</a>                       
+                    </li>
+                    <li class="item__window">
+                        <i class='bx bxs-trash --exe' id="ven"></i>
+                        <a href="#" class="--exe">Eliminar Admin</a>                       
+                    </li>
+                </ul>
+            </div>
+          </div>
+        
+    </div>
+
+ <!-- END CARD -->
+
+
+    
+
+  <!--  -->
+   </div>
+
+
+
+   
+
+   
+    <!-- END TEMPLATE -->
+</div>
+<script>
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="../../js/employes.js"></script>
+</main>
+</body>
+</html>

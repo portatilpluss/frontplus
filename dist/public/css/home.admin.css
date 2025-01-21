@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    padding: 5px 10px;
+    font-size: 20px;
+}
+.text{
+    padding: 0 10px;
+    font-size: 15px;
+}
+.main{
+    margin-top: 80px;
+    padding: 0  20px;
+    /* background-color: red; */
+}
+.main__card{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 40px;
+    gap: 20px;
+}
+.on{
+    color: blue;
+}
+.gr{
+    color: green;
+}
+.card{
+    width: 300px;
+    height: 170px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    gap: 20px;
+    padding: 20px;
+    cursor: pointer;
+    
+}
+
+/* LOGS */
+
+.main__logs{
+    margin-top: 40px;
+    background-color: #ffffff;
+}
+.logs__header{
+    /* background-color: red; */
+    width: 100%;
+    height: 80px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.322) ;
+}
+.logs__body{
+    /* background-color: aqua; */
+    height: 400px;
+    overflow: hidden;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+.log__tag{
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    /* background-color: blue; */
+    padding: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.144) ;
+
+}
+.log__tag:hover{
+    background-color: #f0f0f0;
+}
+.logs__footer{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    padding: 20px;
+}
+.eli, a{
+    color: blue;
+}
+
+@media screen and (max-width: 768px){
+    .main__card{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .card{
+        width: 100%;
+    }
+    .main__logs{
+        margin-top: 20px;
+    }
+    .logs__header{
+        height: 60px;
+    }
+    .logs__body{
+        height: 300px;
+    }
+    .logs__footer{
+        height: 60px;
+    }
+    
+}
+
+@media screen and (max-width: 1200px){
+    .main__card{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        place-items: center;
+    }
+    /* .card{
+        width: 100%;
+    }
+    .main__logs{
+        margin-top: 20px;
+    }
+    .logs__header{
+        height: 60px;
+    }
+    .logs__body{
+        height: 300px;
+    }
+    .logs__footer{
+        height: 60px;
+    } */
+    
+}

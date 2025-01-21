@@ -1,5 +1,5 @@
 const dashUser = (req, res)=>{
-    res.render("user/none.ejs")
+    res.render("user/home_user.ejs")
 }
 
 

@@ -11,9 +11,7 @@ export const oauth = async(req, res, next)=>{
         }
 
 
-        const decoded = await jwt.verify(token, process.env.PRIVATE_KEY);
-        
-        req.user = decoded;
+        const decoded = await jwt.verify(token, process.env.PRIVATE_KEY);        
         next();
     } catch (error) {
         console.log(error);

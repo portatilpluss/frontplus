@@ -47,7 +47,7 @@ const Register = async()=>{
             timer: 1500
           });     
         setTimeout(function () {
-            window.location.reload();
+            window.location.href= "/";
         }, 1000);
     }
  })

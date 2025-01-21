@@ -1,4 +1,11 @@
 
+document.getElementById('nav__logo').addEventListener('click',()=>{
+    setTimeout(function () {
+
+        window.location.reload();
+    },500)
+})
+
 const Login = async ()=>{
     const apiFull = document.getElementById("apiFull").getAttribute("data-url");
     const email = document.getElementById("email").value;
@@ -49,8 +56,9 @@ const Login = async ()=>{
                             text: "Rol Invalid!",
                           });
                     }
-                }, 1000);
+                }, 1500);
         }
+        // console.log(data.payload.name);
 
     })
     .catch(error =>{

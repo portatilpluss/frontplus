@@ -37,6 +37,16 @@ const logout = (req, res) => {
     res.clearCookie('token');
     res.redirect('/');
 }
+const templateAdmin =(req, res)=>{
+    const url= process.env.APIURL;
+    const FullUrl = `${url}/view`;
+    res.render('templates/admin.ejs',{FullUrl})
+}
+const templateUser =(req, res)=>{
+    const url= process.env.APIURL;
+    const FullUrl = `${url}/view`;
+    res.render('templates/admin.ejs',{FullUrl})
+}
 
 export const controller = {
     Home,
@@ -44,5 +54,7 @@ export const controller = {
     forgotPassword,
     insetCode,
     updatePassword,
-    logout
+    logout,
+    templateAdmin,
+    templateUser
 }

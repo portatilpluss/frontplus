@@ -16,6 +16,11 @@ app.set("views", path.join(__dirname, "views"));
 
 app.use(express.static(path.join(__dirname, "public")));
 app.use(cookieParser());
+// Middleware para agregar variables globales
+app.use((req, res, next) => {
+    res.locals.FullUrl = `${process.env.APIURL}/view`;
+    next();
+});
 // Routes
 app.use("/", routes);
 

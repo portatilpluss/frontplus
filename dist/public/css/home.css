@@ -7,7 +7,7 @@
     font-family: "Poppins", sans-serif;
 }
 body{
-    background: url(../img/fon.jpg);
+    background-image: url(../img/fon.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -24,7 +24,9 @@ nav{
 }
 .nav__item{
     margin: 30px;
+    cursor: pointer;
 }
+
 .nav__item h1{
     font-size: 20;
 
@@ -86,6 +88,7 @@ label{
 }
 input{
     background-color:  #00000048;
+    color: white;
     height: 30px;
     width: 100%;
     outline: none;

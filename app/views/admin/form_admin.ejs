@@ -1,0 +1,81 @@
+
+<%- include('../templates/admin.ejs') %>
+<head>
+    <link rel="stylesheet" href="../../css/addemployes.css">
+
+</head>
+
+<div class="form__add">
+    <div class="add">
+
+        <div class="add__header">
+            <h1>Agregar Empleado</h1>
+            <i class="bx bx-x devo" id="devo"></i>
+
+        </div>
+        <div class="add__body">
+            <div class="dos">
+                <div class="form__input">
+                    <label for="">Nombre</label>
+                    <input type="text" class="ipt" id="names" placeholder="Name">
+                </div>
+                <div class="form__input">
+                    <label for="">Apellido</label>
+                    <input type="text" class="ipt" id="lastname" placeholder="Last Name">
+                </div>
+            </div>
+            <div class="dos">
+                <div class="form__input">
+                    <label for="">Identificacion</label>
+                    <input type="number" class="ipt" id="id" placeholder="Id">
+                </div>
+                <div class="form__input">
+                    <label for="">Edad</label>
+                    <input type="number" class="ipt" id="age" placeholder="Age">
+                </div>
+                
+            </div>
+            <div class="dos">
+                <div class="form__input">
+                    <label for="">Telefono</label>
+                    <input type="number" class="ipt" id="phone" placeholder="Phone">
+                </div>
+                <div class="form__input">
+                    <label for="">Email</label>
+                    <input type="text" class="ipt" id="emails" placeholder="Email">
+                </div>       
+            </div>
+            <div class="dos">
+                <div class="form__input">
+                    <label for="">Contraseña</label>
+                    <input type="text" class="ipt" id="pasword" placeholder="Password">
+                    <input type="hidden" id="urlful" data-url="<%= urlFull  %>">
+                </div>
+                <div class="form__input">
+                    <label for="">Rol</label>
+                    <select name="" id="rol" class="ipt">
+                        <option value="1" id="rol">Admin</option>
+                        <!-- <option value="2" id="rol">User</option> -->
+                    </select>
+                    <!-- <input type="text" class="ipt" id="role" placeholder="Role"> -->
+                </div>
+            </div>
+            <div class="add__footer">
+                <button class="close__btn">Cancelar</button>
+                <button class="add__btn" onclick="addmin();">Agregar</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+ <!-- END TEMPLATE -->
+</div>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="../../js/addadmin.js"></script>
+</main>
+</body>
+</html>
